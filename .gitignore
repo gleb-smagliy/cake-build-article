@@ -14,7 +14,7 @@ x64/
 build/tools
 build/TestResult.xml
 package/
-.artifacts/
+.artefacts/
 bld/
 [Bb]in/
 [Oo]bj/

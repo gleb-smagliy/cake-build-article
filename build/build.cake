@@ -28,20 +28,20 @@ Task("Pack")
 .Does(()=> 
 {
 	var packageDir = @"..\package";
-	var artifactsDir = @"..\.artifacts";
+	var artefactsDir = @"..\.artefacts";
 
 	MoveFiles("*.nupkg", packageDir);
 
 	EnsureDirectoryExists(packageDir);
 	CleanDirectory(packageDir);
 
-	EnsureDirectoryExists(artifactsDir);
-	CleanDirectory(artifactsDir);
-	CopyFiles(@"..\Solution\MyProject\bin\" + configuration + @"\*.dll", artifactsDir);
-	CopyFiles(@"..\Solution\MyProject\bin\" + configuration + @"\*.pdb", artifactsDir);
-	CopyFileToDirectory(@".\Solution.nuspec", artifactsDir);
+	EnsureDirectoryExists(artefactsDir);
+	CleanDirectory(artefactsDir);
+	CopyFiles(@"..\Solution\MyProject\bin\" + configuration + @"\*.dll", artefactsDir);
+	CopyFiles(@"..\Solution\MyProject\bin\" + configuration + @"\*.pdb", artefactsDir);
+	CopyFileToDirectory(@".\Solution.nuspec", artefactsDir);
 
-	NuGetPack(new FilePath(artifactsDir + @"\Solution.nuspec"), new NuGetPackSettings
+	NuGetPack(new FilePath(artefactsDir + @"\Solution.nuspec"), new NuGetPackSettings
 	{
 		OutputDirectory = packageDir
 	});
