@@ -11,7 +11,10 @@
 [Dd]ebugPublic/
 [Rr]elease/
 x64/
-build/
+build/tools
+build/TestResult.xml
+package/
+.artifacts/
 bld/
 [Bb]in/
 [Oo]bj/

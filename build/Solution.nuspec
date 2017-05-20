@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Solution</id>
+        <version>1.0.0</version>
+        <title>Test solution for demonstration purposes</title>
+        <description>
+            Test solution for demonstration purposes
+        </description>
+        <authors>Gleb Smagliy</authors>
+        <owners>Gleb Smagliy</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <tags></tags>
+        <references>
+            <reference file="MyProject.dll" />
+        </references>
+    </metadata>
+    <files>
+        <file src=".\MyProject.dll" target="lib\net45"/>
+        <file src=".\MyProject.pdb" target="lib\net45"/>
+    </files>
+</package>
